@@ -26,7 +26,7 @@ func main() {
 	enderecoExemplo := endereco{"rua Chico Balua", 45}
 
 	user2 := usuario{"Eduardo", 30, enderecoExemplo}
-	fmt.Println("Nome:", user2.nome, "Idade:", user2.idade, "Endereço", user2.endereco)
+	fmt.Println("Nome:", user2.nome, "Idade:", user2.idade, "Endereço", user2.endereco.numero)
 	fmt.Println("struct dentro de struct", user2)
 
 	user3 := usuario{nome: "Declau"}
