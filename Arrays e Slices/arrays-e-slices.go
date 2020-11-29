@@ -39,4 +39,37 @@ func main() {
 
 	array2[1] = "Posição alterada"
 	fmt.Println(slice2)
+
+	fmt.Println("----------------------------------")
+	//ARRAYS INTERNOS
+	//Função make aloca um espaço na memória
+	//Make recebe três parâmetros(tipo, tamanho, capacidade máxima)
+	//Função make inicialmente vai criar um array de 11 posições
+	//e vai retornar um Slice que vai pegar as 10 primeiras posições desse Array
+	slice3 := make([]float32, 10, 11)
+	fmt.Println(slice3)
+	fmt.Println(len(slice3)) //length, mostra o tamanho o Slice
+	fmt.Println(cap(slice3)) //capacity, mostra a capacidade do Slice
+
+	//Estourar um Slice
+	slice3 = append(slice3, 3)
+	fmt.Println(slice3)
+	fmt.Println(len(slice3)) //length, mostra o tamanho o Slice
+	fmt.Println(cap(slice3)) //capacity, mostra a capacidade do Slice
+	// Tamanho 11 , Capacidade 11
+	//Vai estourar????
+	slice3 = append(slice3, 5)
+	fmt.Println(slice3)
+	fmt.Println(len(slice3)) //length, mostra o tamanho o Slice
+	fmt.Println(cap(slice3)) //capacity, mostra a capacidade do Slice
+	//Não estourou. Tamanho foi para 12 e capacidade 24.
+	//Go quando ve que o Slice vai estourar ele cria um outro Array para se referenciar
+	//e dobra seu tamanho
+
+	slice4 := make([]float32, 5)
+	fmt.Println(slice4)
+	slice4 = append(slice4, 10)
+	fmt.Println(len(slice4)) //length, mostra o tamanho o Slice
+	fmt.Println(cap(slice4)) //capacity, mostra a capacidade do Slice
+
 }
