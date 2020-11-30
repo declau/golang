@@ -2,8 +2,7 @@ package main
 
 import "fmt"
 
-//Não podemos ter mais de um parâmetro variático por função e
-//obrigatoriamente tem que ser o último parâmetro
+//Não podemos ter mais de um parâmetro variático por função.
 func soma(numeros ...int) int {
 	total := 0
 	for _, numero := range numeros {
